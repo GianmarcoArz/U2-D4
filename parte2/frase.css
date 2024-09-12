@@ -8,3 +8,53 @@
 7 ritardare progressivamente l'animazione delle altre 2 parole 
 */
 
+main {
+  margin: 5rem;
+  padding: 1rem;
+  border: solid, rgba(0, 0, 0, 0.505);
+  font-size: 20px;
+  font-weight: 700;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+span {
+  color: #718c9d;
+  margin-left: 10px;
+}
+
+i {
+  position: absolute;
+  opacity: 0;
+}
+
+.parole i:nth-of-type(1) {
+  animation: fade-in 5s both;
+}
+.parole i:nth-of-type(2) {
+  opacity: 0;
+  animation: fade-in 5s both 2s;
+}
+.parole i:nth-of-type(3) {
+  opacity: 0;
+  animation: fade-in 5s both 4s;
+}
+
+@keyframes fade-in {
+  0%,
+  25% {
+    opacity: 0;
+    transform: translateY(-100px);
+    color: black;
+  }
+  25%,
+  50% {
+    opacity: 1;
+    transform: translateY(0px);
+    color: #6c899c;
+  }
+  50%,
+  100% {
+    opacity: 0;
+    transform: translateY(+600px);
+    color: rgb(0, 0, 0);
+  }
+}
