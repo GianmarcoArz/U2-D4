@@ -1,0 +1,59 @@
+.bord {
+  background-color: #666666;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* QUI CREAMO I POSTIT */
+.bord div {
+  width: 300px;
+  height: 250px;
+  margin: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 0px -39px 55px -41px #000000, 14px 14px 9px -10px #000000;
+}
+
+div h1 {
+  font-family: "Indie Flower", sans-serif;
+  font-size: 55px;
+  font-weight: 700;
+}
+
+div p {
+  font-family: "Indie Flower", sans-serif;
+  font-style: italic;
+  font-size: 25px;
+  font-weight: 400;
+}
+
+/* QUI DIAMO I COLORI A POSTIT */
+
+.task1,
+.task5,
+.task7 {
+  background-color: #eaebb4;
+  transform: rotate(-5deg);
+}
+
+.task2,
+.task4,
+.task8 {
+  background-color: #bce2be;
+  transform: rotate(5deg);
+}
+
+.task3,
+.task6 {
+  background-color: #bab9dc;
+  transform: rotate(-10deg);
+}
+
+.bord div:hover {
+  transform: rotate(0);
+  transform: scale(1.2);
+  box-shadow: inset 0px -39px 55px -41px #000000, 14px 14px 27px 3px #000000;
+}
